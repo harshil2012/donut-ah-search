@@ -7,7 +7,11 @@
 	"authors": [
 		"hyy_shadow"
 	],
-	"contact": {},
+	"contact": {
+		"homepage": "https://github.com/harshil2012/donut-ah-search",
+		"sources": "https://github.com/harshil2012/donut-ah-search",
+		"issues": "https://github.com/harshil2012/donut-ah-search/issues"
+	},
 	"license": "MIT",
 	"icon": "assets/ahsearch/icon.png",
 	"environment": "*",

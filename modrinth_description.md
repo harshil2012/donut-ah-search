@@ -1,45 +1,65 @@
-# 🍩 Donut AH Search
+﻿# Donut AH Search
 
-**Donut AH Search** is a clean, lightweight, and super-fast Fabric mod for Minecraft that lets you instantly search the Auction House (`/ah`) for whatever item you are holding in your main hand with a single press of a key!
-
-Created by **hyy_shadow**.
+Donut AH Search is a client-side Fabric utility mod designed for economy servers with an Auction House (such as DonutSMP). It allows you to search the auction house for whatever item you are holding in your hand with a single keypress.
 
 ---
 
-## ✨ Features
+### Why use this mod?
 
-- **⚡ Instant 1-Click Search**: Hold any item in your main hand and press `0` (configurable in controls) to instantly search the Auction House.
-- **🎯 Perfect Item & Custom Name Matching**: Uses exact in-game tooltip display names, working seamlessly for:
-  - 🏹 **Tipped Arrows**: *Arrow of Healing*, *Arrow of Slowness*, *Arrow of Poison*, etc.
-  - 🧪 **Potions**: *Potion of Regeneration*, *Splash Potion of Regeneration*, *Lingering Potion of Harming*, etc.
-  - 🛒 **Minecart Variants**: *Minecart with Hopper*, *Minecart with Chest*, *Minecart with TNT*, etc.
-  - 🥩 **Foods & Resources**: *Steak*, *Golden Apple*, etc.
-  - 🏷️ **Custom Renamed Items**: Supports anvil-renamed items (automatically strips `§` color formatting codes).
-- **📚 Enchanted Books & Equipment**: Detects stored enchantments (e.g. *Sharpness V*, *Protection IV*) and appends them automatically (e.g. `/ah enchanted book sharpness 5`).
-- **💬 On-Screen Action-Bar Feedback**: Displays clean on-screen confirmation of the exact `/ah` command sent to the server.
-- **⚙️ Fully Configurable**: Change command prefixes (`/ah`, `/auctionhouse`, `/search`) and search modes on the fly.
+Typing out long auction house commands like `/ah enchanted book sharpness 5` or `/ah netherite sword sharpness 5 unbreaking 3` takes time, especially when comparing prices or looking for quick snipes. 
+
+With Donut AH Search:
+1. Hold any item or enchanted book in your main hand.
+2. Press **0** (default hotkey, fully configurable in Controls).
+3. The mod formats the item name and enchantments and sends the search command automatically.
 
 ---
 
-## 🎮 Commands
+### Key Features
 
-Configure the mod easily in-game using client-side commands:
+- **One-Key Search:** Press `0` to instantly search `/ah` for the item in your main hand.
+- **Enchantment Detection:** Automatically reads enchantments on tools, armor, weapons, and enchanted books, converting Roman numerals into numbers (e.g., Sharpness V becomes `sharpness 5`).
+- **Exact Tooltip Matching:** Uses the clean in-game display name for items like potions, tipped arrows, and renamed items (color codes are stripped automatically).
+- **Customizable Prefix:** Change the search prefix if your server uses `/auctionhouse`, `/search`, or `/ah`.
+- **Purely Client-Side:** Does not require server-side installation. Works on any multiplayer server that supports auction house commands.
 
-| Command | Description |
+---
+
+### Examples
+
+| Held Item | Command Sent |
 |---|---|
-| `/ahsearch prefix <prefix>` | Set custom command prefix (default: `ah`) |
-| `/ahsearch mode <name/id>` | Set search mode (`DISPLAY_NAME` or `ID`) |
-| `/ahsearch status` | View current prefix and search mode settings |
+| Diamond Sword | `/ah diamond sword` |
+| Diamond Sword *(Sharpness V, Looting III)* | `/ah diamond sword sharpness 5 looting 3` |
+| Enchanted Book *(Mending I)* | `/ah enchanted book mending 1` |
+| Netherite Pickaxe *(Efficiency V, Fortune III, Unbreaking III)* | `/ah netherite pickaxe efficiency 5 fortune 3 unbreaking 3` |
+| Potion of Regeneration | `/ah potion of regeneration` |
+| Arrow of Slowness | `/ah arrow of slowness` |
 
 ---
 
-## 🛠️ Supported Minecraft Versions
+### In-Game Commands
 
-- **Minecraft 1.21.11** (Fabric)
-- **Minecraft 26.1, 26.1.1, 26.1.2, 26.2** (Fabric)
+You can configure settings directly in game without restarting Minecraft:
+
+- `/ahsearch prefix <prefix>` &mdash; Sets the command prefix (default: `ah`).
+- `/ahsearch mode <DISPLAY_NAME|ID>` &mdash; Toggles between using display tooltip names or raw registry item IDs.
+- `/ahsearch status` &mdash; Prints your current prefix and search mode settings.
+
+Configuration is automatically saved in `.minecraft/config/ahsearch.json`.
 
 ---
 
-## 👨‍💻 Author
+### Requirements & Installation
 
-Developed and maintained by **hyy_shadow**.
+1. Install **Fabric Loader** for your Minecraft version.
+2. Ensure **Fabric API** is installed in your `mods` folder.
+3. Drop `donut-ah-search-*.jar` into your `.minecraft/mods` folder.
+
+---
+
+### Source & Issues
+
+- Source Code: [GitHub](https://github.com/harshil2012/donut-ah-search)
+- Issue Tracker: [GitHub Issues](https://github.com/harshil2012/donut-ah-search/issues)
+- License: [MIT License](https://github.com/harshil2012/donut-ah-search/blob/main/LICENSE)

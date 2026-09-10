@@ -1,6 +1,6 @@
-# AH Search+
+# 🍩 Donut AH Search (Minecraft 26.2)
 
-**AH Search+** is a complete, client-side Minecraft Fabric mod for Minecraft 26.2 using Java 25.
+**Donut AH Search** is a complete, client-side Minecraft Fabric mod for Minecraft 26.2 using Java 25.
 
 It automatically reads the item currently held in your main hand (including its ID and enchantments) and executes an Auction House search command in chat.
 

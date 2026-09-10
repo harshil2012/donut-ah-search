@@ -8,6 +8,15 @@ on: [pull_request, push]
 
 jobs:
   build:
+    strategy:
+      matrix:
+        include:
+          - version: "1.21.11"
+            dir: "mc-1.21.11"
+            java: "21"
+          - version: "26.2"
+            dir: "mc-26.2"
+            java: "25"
     runs-on: ubuntu-24.04
     steps:
       - name: checkout repository
@@ -17,14 +26,17 @@ jobs:
       - name: setup jdk
         uses: actions/setup-java@v5
         with:
-          java-version: '25'
+          java-version: ${{ matrix.java }}
           distribution: 'microsoft'
       - name: make gradle wrapper executable
+        working-directory: ${{ matrix.dir }}
         run: chmod +x ./gradlew
       - name: build
+        working-directory: ${{ matrix.dir }}
         run: ./gradlew build
       - name: capture build artifacts
         uses: actions/upload-artifact@v7
         with:
-          name: Artifacts
-          path: build/libs/
+          name: Artifacts-${{ matrix.version }}
+          path: ${{ matrix.dir }}/build/libs/
+

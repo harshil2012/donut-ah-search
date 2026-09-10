@@ -1,40 +1,37 @@
-# gradle
-
+# Gradle build and cache directories
 .gradle/
 build/
 out/
 classes/
+.gradletasknamecache
 
-# eclipse
+# Fabric / Minecraft client runtime test directories
+run/
+**/run/
 
-*.launch
-
-# idea
-
+# IDE / Editor configuration
 .idea/
 *.iml
 *.ipr
 *.iws
-
-# vscode
-
 .settings/
 .vscode/
 bin/
 .classpath
 .project
+*.launch
 
-# macos
+# OS specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-*.DS_Store
-
-# fabric
-
-run/
-
-# java
-
+# Java crash logs and profiler dumps
 hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# Explicitly keep release distribution jars for backup
+!dist/
+!dist/*.jar
